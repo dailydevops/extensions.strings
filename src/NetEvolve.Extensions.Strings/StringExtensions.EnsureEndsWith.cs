@@ -1,7 +1,6 @@
-﻿namespace NetEvolve.Extensions.Strings;
+﻿namespace System;
 
 using NetEvolve.Arguments;
-using System;
 
 public static partial class StringExtensions
 {

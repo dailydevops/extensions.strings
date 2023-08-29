@@ -1,4 +1,4 @@
-﻿namespace NetEvolve.Extensions.Strings;
+﻿namespace System;
 
 /// <summary>
 /// Collection of <see cref="string"/> extension methods.

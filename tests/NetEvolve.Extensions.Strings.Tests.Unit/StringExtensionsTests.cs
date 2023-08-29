@@ -1,4 +1,4 @@
-﻿namespace NetEvolve.Extensions.Strings.Tests.Unit;
+﻿namespace System.Tests.Unit;
 
 using NetEvolve.Extensions.XUnit;
 using System.Diagnostics.CodeAnalysis;
