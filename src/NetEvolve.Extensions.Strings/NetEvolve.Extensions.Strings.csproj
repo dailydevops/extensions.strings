@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+
+    <Title>$(MSBuildProjectName)</Title>
+    <Description>Library with common `string` extension methods for easy reuse.</Description>
+    <PackageTags>string;extensions;methods</PackageTags>
+    <PackageProjectUrl>https://github.com/dailydevops/extensions.strings</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/dailydevops/extensions.strings.git</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NetEvolve.Arguments" />
+  </ItemGroup>
+
+</Project>
