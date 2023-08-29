@@ -23,8 +23,12 @@ jobs:
     name: Build & Tests
     uses: dailydevops/pipelines/.github/workflows/cicd-dotnet.yml@main
     with:
+      enableSonarQube: true
       dotnet-logging: ${{ inputs.dotnet-logging }}
       dotnet-version: |
+        6.x
         7.x
-      solution: ###SOLUTION###
+        8.x
+      dotnet-quality: preview
+      solution: ./Extensions.Strings.sln
     secrets: inherit

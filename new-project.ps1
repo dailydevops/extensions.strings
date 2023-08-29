@@ -45,6 +45,6 @@ New-Project `
   -DisableTests $DisableTests `
   -DisableUnitTests $DisableUnitTests `
   -DisableIntegrationTests $DisableIntegrationTests `
-  -SolutionFile "###SOLUTION###" `
+  -SolutionFile "./Extensions.Strings.sln" `
   -OutputDirectory (Get-Location) `
   -EnableProjectGrouping $EnableProjectGrouping
