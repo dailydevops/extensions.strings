@@ -26,6 +26,7 @@ jobs:
       enableSonarQube: true
       dotnet-logging: ${{ inputs.dotnet-logging }}
       dotnet-version: |
+        5.x
         6.x
         7.x
         8.x
