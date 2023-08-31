@@ -22,6 +22,8 @@ public static partial class StringExtensions
         Argument.ThrowIfNull(value);
         Argument.ThrowIfNull(prefix);
 
+#pragma warning disable CA1062 // Validate arguments of public methods
         return value.StartsWith(prefix, comparison) ? value : $"{prefix}{value}";
+#pragma warning restore CA1062 // Validate arguments of public methods
     }
 }
