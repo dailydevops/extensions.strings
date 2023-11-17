@@ -1,7 +1,7 @@
 ﻿namespace System.Tests.Unit;
 
-using NetEvolve.Extensions.XUnit;
 using System;
+using NetEvolve.Extensions.XUnit;
 using Xunit;
 
 public sealed partial class StringExtensionsTests
