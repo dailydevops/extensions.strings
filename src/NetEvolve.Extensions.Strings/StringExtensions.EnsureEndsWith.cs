@@ -22,8 +22,6 @@ public static partial class StringExtensions
         Argument.ThrowIfNull(value);
         Argument.ThrowIfNull(suffix);
 
-#pragma warning disable CA1062 // Validate arguments of public methods
         return value.EndsWith(suffix, comparison) ? value : $"{value}{suffix}";
-#pragma warning restore CA1062 // Validate arguments of public methods
     }
 }
