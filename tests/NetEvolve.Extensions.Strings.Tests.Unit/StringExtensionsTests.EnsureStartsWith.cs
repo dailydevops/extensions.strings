@@ -51,7 +51,7 @@ public sealed partial class StringExtensionsTests
         Assert.Equal(expected, result);
     }
 
-    public static TheoryData GetEnsureStartsWithData()
+    public static TheoryData<string, string, string, StringComparison> GetEnsureStartsWithData()
     {
         var data = new TheoryData<string, string, string, StringComparison>
         {
