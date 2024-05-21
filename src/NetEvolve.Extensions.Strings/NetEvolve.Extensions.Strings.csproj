@@ -9,6 +9,8 @@
     <PackageProjectUrl>https://github.com/dailydevops/extensions.strings</PackageProjectUrl>
     <RepositoryUrl>https://github.com/dailydevops/extensions.strings.git</RepositoryUrl>
 
+    <CopyrightYearStart>2023</CopyrightYearStart>
+
     <SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
 
     <NoWarn Condition=" '$(TargetFramework)' == 'netstandard2.0' ">$(NoWarn);CA1062</NoWarn>
