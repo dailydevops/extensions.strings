@@ -9,6 +9,8 @@
     <PackageProjectUrl>https://github.com/dailydevops/extensions.strings</PackageProjectUrl>
     <RepositoryUrl>https://github.com/dailydevops/extensions.strings.git</RepositoryUrl>
 
+    <PackageReleaseNotes>$(PackageProjectUrl)/releases</PackageReleaseNotes>
+
     <CopyrightYearStart>2023</CopyrightYearStart>
 
     <SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
