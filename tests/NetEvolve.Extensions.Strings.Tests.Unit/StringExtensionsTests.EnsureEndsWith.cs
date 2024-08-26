@@ -58,7 +58,7 @@ public sealed partial class StringExtensionsTests
             { "valueSUFFIX", "value", "SUFFIX", StringComparison.CurrentCulture },
             { "valueSUFFIX", "value", "SUFFIX", StringComparison.CurrentCultureIgnoreCase },
             { "valueSUFFIX", "valueSUFFIX", "SUFFIX", StringComparison.OrdinalIgnoreCase },
-            { "valueSUFFIX", "valueSUFFIX", "SUFFIX", StringComparison.Ordinal }
+            { "valueSUFFIX", "valueSUFFIX", "SUFFIX", StringComparison.Ordinal },
         };
 
         return data;
