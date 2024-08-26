@@ -58,7 +58,7 @@ public sealed partial class StringExtensionsTests
             { "PREFIXvalue", "value", "PREFIX", StringComparison.CurrentCulture },
             { "PREFIXvalue", "value", "PREFIX", StringComparison.CurrentCultureIgnoreCase },
             { "PREFIXvalue", "PREFIXvalue", "PREFIX", StringComparison.OrdinalIgnoreCase },
-            { "PREFIXvalue", "PREFIXvalue", "PREFIX", StringComparison.Ordinal }
+            { "PREFIXvalue", "PREFIXvalue", "PREFIX", StringComparison.Ordinal },
         };
 
         return data;
