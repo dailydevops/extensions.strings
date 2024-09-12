@@ -18,6 +18,11 @@
     <NoWarn Condition=" '$(TargetFramework)' == 'netstandard2.0' ">$(NoWarn);CA1062</NoWarn>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <!-- Workaround, until https://github.com/GitTools/GitVersion/pull/4206 is released -->
+    <GitVersionTargetFramework>net8.0</GitVersionTargetFramework>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="NetEvolve.Arguments" />
   </ItemGroup>
