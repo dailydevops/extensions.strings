@@ -1,25 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net8.0;net9.0</TargetFrameworks>
-
     <Title>$(MSBuildProjectName)</Title>
     <Description>Library with common `string` extension methods for easy reuse.</Description>
     <PackageTags>string;extensions;methods</PackageTags>
     <PackageProjectUrl>https://github.com/dailydevops/extensions.strings</PackageProjectUrl>
     <RepositoryUrl>https://github.com/dailydevops/extensions.strings.git</RepositoryUrl>
-
     <PackageReleaseNotes>$(PackageProjectUrl)/releases</PackageReleaseNotes>
-
     <CopyrightYearStart>2023</CopyrightYearStart>
-
     <SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
-
     <NoWarn Condition=" '$(TargetFramework)' == 'netstandard2.0' ">$(NoWarn);CA1062</NoWarn>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="NetEvolve.Arguments" />
   </ItemGroup>
-
 </Project>
