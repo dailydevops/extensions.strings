@@ -10,7 +10,7 @@ A modern .NET library providing essential extension methods for `System.String` 
 
 - 🎯 **Simple & Intuitive API** - Extension methods that feel natural to use
 - 🚀 **Multi-Framework Support** - Compatible with .NET Standard 2.0, .NET 8.0, .NET 9.0, and .NET 10.0
-- 📦 **Zero Dependencies** - Minimal footprint (only requires `NetEvolve.Arguments`)
+- 📦 **Minimal Dependencies** - Single, lightweight external dependency (`NetEvolve.Arguments`)
 - 🔒 **Null-Safe** - Proper argument validation with meaningful exceptions
 
 ## Installation
