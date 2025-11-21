@@ -1,12 +1,12 @@
 ﻿namespace System.Tests.Unit;
 
 using System;
-using NetEvolve.Extensions.XUnit;
-using Xunit;
+using System.Threading.Tasks;
+using TUnit.Core.Executors;
 
 public sealed partial class StringExtensionsTests
 {
-    [Fact]
+    [Test]
     public void EnsureEndsWith_WhenStringIsNull_ThrowsArgumentNullException()
     {
         // Arrange
@@ -14,13 +14,13 @@ public sealed partial class StringExtensionsTests
         var suffix = "suffix";
 
         // Act
-        string Act() => value.EnsureEndsWith(suffix);
+        void Act() => value.EnsureEndsWith(suffix);
 
         // Assert
         _ = Assert.Throws<ArgumentNullException>("value", Act);
     }
 
-    [Fact]
+    [Test]
     public void EnsureEndsWith_WhenSuffixIsNull_ThrowsArgumentNullException()
     {
         // Arrange
@@ -28,16 +28,16 @@ public sealed partial class StringExtensionsTests
         var suffix = default(string);
 
         // Act
-        string Act() => value.EnsureEndsWith(suffix);
+        void Act() => value.EnsureEndsWith(suffix);
 
         // Assert
         _ = Assert.Throws<ArgumentNullException>("suffix", Act);
     }
 
-    [Theory]
-    [MemberData(nameof(GetEnsureEndsWithData))]
-    [SetCulture("en-US")]
-    public void EnsureEndsWith_Theory_Expected(
+    [Test]
+    [MethodDataSource(nameof(GetEnsureEndsWithData))]
+    [Culture("en-US")]
+    public async Task EnsureEndsWith_Theory_Expected(
         string expected,
         string value,
         string suffix,
@@ -48,19 +48,14 @@ public sealed partial class StringExtensionsTests
         var result = value.EnsureEndsWith(suffix, comparison);
 
         // Assert
-        Assert.Equal(expected, result);
+        _ = await Assert.That(expected).IsEqualTo(result);
     }
 
-    public static TheoryData<string, string, string, StringComparison> GetEnsureEndsWithData()
-    {
-        var data = new TheoryData<string, string, string, StringComparison>
-        {
-            { "valueSUFFIX", "value", "SUFFIX", StringComparison.CurrentCulture },
-            { "valueSUFFIX", "value", "SUFFIX", StringComparison.CurrentCultureIgnoreCase },
-            { "valueSUFFIX", "valueSUFFIX", "SUFFIX", StringComparison.OrdinalIgnoreCase },
-            { "valueSUFFIX", "valueSUFFIX", "SUFFIX", StringComparison.Ordinal },
-        };
-
-        return data;
-    }
+    public static IEnumerable<(string, string, string, StringComparison)> GetEnsureEndsWithData =>
+        [
+            ("valueSUFFIX", "value", "SUFFIX", StringComparison.CurrentCulture),
+            ("valueSUFFIX", "value", "SUFFIX", StringComparison.CurrentCultureIgnoreCase),
+            ("valueSUFFIX", "valueSUFFIX", "SUFFIX", StringComparison.OrdinalIgnoreCase),
+            ("valueSUFFIX", "valueSUFFIX", "SUFFIX", StringComparison.Ordinal),
+        ];
 }
