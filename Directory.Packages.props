@@ -15,6 +15,6 @@
   <ItemGroup>
     <PackageVersion Include="NetEvolve.Arguments" Version="2.0.17" />
     <PackageVersion Include="NetEvolve.Extensions.TUnit" Version="3.1.0" />
-    <PackageVersion Include="TUnit" Version="1.4.8" />
+    <PackageVersion Include="TUnit" Version="1.5.1" />
   </ItemGroup>
 </Project>
