@@ -19,8 +19,8 @@ public static partial class StringExtensions
         StringComparison comparison = StringComparison.CurrentCulture
     )
     {
-        Argument.ThrowIfNull(value);
-        Argument.ThrowIfNull(prefix);
+        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullException.ThrowIfNull(prefix);
 
         return value.StartsWith(prefix, comparison) ? value : $"{prefix}{value}";
     }

@@ -19,8 +19,8 @@ public static partial class StringExtensions
         StringComparison comparison = StringComparison.CurrentCulture
     )
     {
-        Argument.ThrowIfNull(value);
-        Argument.ThrowIfNull(suffix);
+        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullException.ThrowIfNull(suffix);
 
         return value.EndsWith(suffix, comparison) ? value : $"{value}{suffix}";
     }
