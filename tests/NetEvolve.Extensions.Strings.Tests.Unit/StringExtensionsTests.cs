@@ -61,7 +61,20 @@ public sealed class StringExtensionsTests
             ("valueSUFFIX", "value", "SUFFIX", StringComparison.CurrentCultureIgnoreCase),
             ("valueSUFFIX", "valueSUFFIX", "SUFFIX", StringComparison.OrdinalIgnoreCase),
             ("valueSUFFIX", "valueSUFFIX", "SUFFIX", StringComparison.Ordinal),
+            ("valuesuffix", "valuesuffix", "SUFFIX", StringComparison.OrdinalIgnoreCase),
+            ("valuesuffixSUFFIX", "valuesuffix", "SUFFIX", StringComparison.Ordinal),
         ];
+
+    [Test]
+    [Culture("en-US")]
+    public async Task EnsureEndsWith_DefaultComparison_IsCaseSensitive()
+    {
+        // Act
+        var result = "valuesuffix".EnsureEndsWith("SUFFIX");
+
+        // Assert
+        _ = await Assert.That(result).IsEqualTo("valuesuffixSUFFIX");
+    }
 
     [Test]
     public void EnsureStartsWith_WhenArgumentValueNull_ThrowsArgumentNullException()
@@ -114,5 +127,18 @@ public sealed class StringExtensionsTests
             ("PREFIXvalue", "value", "PREFIX", StringComparison.CurrentCultureIgnoreCase),
             ("PREFIXvalue", "PREFIXvalue", "PREFIX", StringComparison.OrdinalIgnoreCase),
             ("PREFIXvalue", "PREFIXvalue", "PREFIX", StringComparison.Ordinal),
+            ("prefixvalue", "prefixvalue", "PREFIX", StringComparison.OrdinalIgnoreCase),
+            ("PREFIXprefixvalue", "prefixvalue", "PREFIX", StringComparison.Ordinal),
         ];
+
+    [Test]
+    [Culture("en-US")]
+    public async Task EnsureStartsWith_DefaultComparison_IsCaseSensitive()
+    {
+        // Act
+        var result = "prefixvalue".EnsureStartsWith("PREFIX");
+
+        // Assert
+        _ = await Assert.That(result).IsEqualTo("PREFIXprefixvalue");
+    }
 }
