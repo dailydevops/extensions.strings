@@ -9,7 +9,7 @@ using NetEvolve.Arguments;
 public static class StringExtensions
 {
     /// <summary>
-    /// Ensures that the string ends with the specified prefix.
+    /// Ensures that the string ends with the specified suffix.
     /// </summary>
     /// <param name="value">The value to be checked.</param>
     /// <param name="suffix">The suffix to be checked.</param>
